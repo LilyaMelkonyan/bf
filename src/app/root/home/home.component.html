@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0 position-relative video_blok">
+            <video width="100%" height="auto" autoplay loop="true">
+                <source src="/../../../assets/video/bf.mp4" type="video/mp4">
+                <source src="/../../../assets/video/bf.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col-12 p-0 position-absolute text-center menu_blok">
+            <div class="menu">
+                <div class="btn trigger">
+                    <img src="/../../assets/img/logoWhite.png" alt="logo" width="100%">
+                </div>
+                <div id="menuList" *ngIf="menu">
+                    <div class="rotater" *ngFor="let item of menu; let i=index" [@fadeAnimation]>
+                        <div class="btn menuList_name" id="">
+                            <p class="anim animated infinite pulse" (mouseenter)="heartBeatAnimStart($event)" (mouseleave)="heartBeatAnimEnd($event)">
+                              <a [routerLink]="item?.link" (click)="openSubmenu(item)"  [class.activeMenu]="item.name == nameOfMenu">
+                                   {{ item.name }}
+                              </a >
+                            </p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

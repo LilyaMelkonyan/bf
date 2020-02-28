@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-4 my-5">
+            <div class="hovereffect">
+                <img class="img-responsive" src="../../../assets/img/projects/pvd.jpg" alt="wine invest" width="100%">
+                <div class="overlay">
+                   <h2>Wine Invest</h2>
+                   <a class="info" href="#">link here</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 my-5">
+            <figure class="snip1361 mb-0">
+                <img src="../../../assets/img/projects/teachers.jpg" alt="teacher" width="100%" />
+                <figcaption class="">
+                  <h3 class="">MUSIC TEACHERS’ HELPER</h3>
+                  <p>Weekends don't count unless you spend them doing something completely pointless.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col-4 my-5">
+            <figure class="snip0016 mb-0">
+                <img src="../../../assets/img/projects/suteria.jpg" alt="sample41" width="100%"/>
+                <figcaption>
+                    <h2>SUTERIA <span>SUTERIA</span> </h2>
+                    <p>So you can imagine your fears with less distraction.</p>
+                    <a href="#"></a>
+                </figcaption>			
+            </figure>
+        </div>
+        <div class="col-12">
+            <div class="">
+                
+            </div>
+        </div> -->
+      
+    
+      <hover-container class="col-4 mb-3 cursor-p" *ngFor="let project of projects; let i = index">
+          <img src="../../../assets/img/projects/suteria.jpg" alt="" width="100%">
+          <h4 class="text-uppercase mb-0 project_title p-1">{{ project?.name || 'project name' }}</h4>
+          <ng-container overlay> 
+            <div>
+              <h4 class="text-uppercase mb-0">{{ project?.name }}</h4>
+              <p>{{ project?.shortDesc || 'description' }}</p>
+              <!-- <p>{{ project ? i+1 : '0' }} </p> -->
+            </div>
+          </ng-container>
+      </hover-container>
+                     
+    </div>
+</div>

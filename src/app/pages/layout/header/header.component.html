@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 p-0 mb-5 pb-2">
+      <div class="menu">
+        <div class="menu__toggle">
+          <button class="r-button menu__hamburger" (click)="menuHamburger()">
+            <span class="m-hamburger">
+              <span class="m-hamburger__label">Open menu</span>
+            </span>
+          </button>
+        </div>
+      
+        <nav class="menu__nav">
+          <div class="navbar-nav">
+            <a [routerLink]="['/staff']" routerLinkActive="active" class="nav-item nav-link" (click)="clickedMenuLink()">Staff <span class="sr-only">(current)</span></a>
+            <a [routerLink]="['/projects']" routerLinkActive="active" class="nav-item nav-link" (click)="clickedMenuLink()">Projects</a>
+          </div>
+        </nav>
+      
+      </div>
+    </div>
+  </div>
+</div>
