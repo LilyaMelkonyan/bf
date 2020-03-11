@@ -1,1 +1,15 @@
-<p>staff works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4 p-0" *ngFor="let member of staff; let i = index">
+          <div class="staffImg " (mouseenter)="mouseEnterImg(member, i)" (mouseleave)="mouseLeaveImg(member, i)">
+              <img [src]="member.imgs[0]" class="img-responsive team-member{{i}}" [alt]="member.name" width="100%"/>  
+              <div class="d-flex flex-column justify-content-end align-items-center infoStaffMember pb-4">
+                <div>
+                  <h1 class="text-light">{{ member.name }}</h1>
+                  <p class="text-light">{{ member.position }}</p>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
